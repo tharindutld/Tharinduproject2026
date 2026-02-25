@@ -1,0 +1,31 @@
+.input-group-text, .form-control, .btn {
+    border:none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.input-group {
+    overflow:hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.input-group-text {
+    background-color: transparent;
+    color: yellowgreen;
+}
+
+.eye-icon {
+    color:blueviolet;
+}
+
+.input-group .btn:hover {
+    background-color: white;
+}
+
+.link-primary {
+    font-weight: 700;
+    
+}
