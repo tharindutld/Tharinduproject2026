@@ -1,0 +1,48 @@
+/* admin_add_user.css */
+
+body {
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+}
+
+#wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styling */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 280px; /* Fixed sidebar width */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: margin .25s ease-out;
+}
+
+/* Content Styling */
+#page-content-wrapper {
+    flex-grow: 1; /* Take up all remaining space */
+    min-width: 0;
+}
+
+.card {
+    border-radius: 0.75rem;
+}
+
+.card-header {
+    border-top-left-radius: 0.75rem !important;
+    border-top-right-radius: 0.75rem !important;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+/* Custom shadow for a modern look */
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+

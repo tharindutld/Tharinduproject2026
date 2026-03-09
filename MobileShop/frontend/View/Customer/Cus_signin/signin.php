@@ -18,14 +18,14 @@
         <div class="col-md-6 border-end">
             
             <h3 class="mb-4 text-center">
-                User <small class="text-muted">Login</small>
+                <small class="text-muted">Login</small>
             </h3>
 
-            <form action="../../../Controllers/Customer/Cus_signin/signin.php" method="POST">
+            <form action="../../../Common/signin.php" method="POST"> 
 
                 <div class="mb-3 input-group input-group-sm">
                     <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-                    <input type="text" name="username" class="form-control " placeholder="Username">
+                    <input type="email" name="email" class="form-control " placeholder="email">
                 </div>
 
                 <div class="mb-3 input-group input-group-sm">

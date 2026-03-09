@@ -1,68 +1,50 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* styles.css */
+
+/* Ensures the offcanvas behaves like a standard column on medium and larger screens */
+@media (min-width: 768px) {
+    .sidebar-offcanvas {
+        position: static !important;
+        transform: none !important;
+        visibility: visible !important;
+        width: 100% !important;
+        height: 100vh !important;
+    }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #1f2937;
+/* Sidebar Link Styling */
+.dashboard-nav .nav-link {
+    border-radius: 0.375rem;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 0.2rem;
 }
 
-
-
-main h2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #111827;
+.dashboard-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.row.g-4 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.dashboard-nav .nav-link.active {
+    background-color: #0d6efd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
+/* Rotate the chevron icon when the collapse menu is open */
+.dashboard-nav .nav-link[aria-expanded="true"] .transition-icon {
+    transform: rotate(180deg);
 }
 
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+.transition-icon {
+    transition: transform 0.3s ease;
 }
 
-.card-body {
-    padding: 20px;
-    height: 100px;
+/* Slight indentation and styling for submenu items */
+#staffSubmenu .nav-link {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    opacity: 0.8;
 }
 
-.card-title {
-    font-size: 14px;
-    color: #6b7280; 
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+#staffSubmenu .nav-link:hover,
+#staffSubmenu .nav-link.text-info {
+    opacity: 1;
+    background-color: transparent;
 }
-
-.fw-bold {
-    font-size: 24px;
-    font-weight: 700;
-    color: #111827;
-}
-
-.col-sm-6 {
-    flex: 1 1 calc(50% - 20px); /* 2 per row on small screens */
-    min-width: 220px;
-}
-
-.col-lg-3 {
-    flex: 1 1 calc(25% - 20px); /* 4 per row on large screens */
-    min-width: 180px;
-}
-
