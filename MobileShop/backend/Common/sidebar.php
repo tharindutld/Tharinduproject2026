@@ -43,7 +43,7 @@
                 </a>
                 <ul class="collapse flex-column ms-4 mt-1 list-unstyled <?= ($currentPage == 'add_staff' || $currentPage == 'view_staff') ? 'show' : '' ?>" id="staffSubmenu" data-bs-parent=".dashboard-nav">
                     <li class="w-100 staff-collapse">
-                        <a href="admin_add_user.php" class="nav-link text-white px-0 <?= ($currentPage == 'add_staff') ? 'text-info fw-bold' : '' ?>">
+                        <a href="add_staff.php" class="nav-link text-white px-0 <?= ($currentPage == 'add_staff') ? 'text-info fw-bold' : '' ?>">
                             <i class="bi bi-person-plus me-2"></i> Add Staff User
                         </a>
                     </li>
