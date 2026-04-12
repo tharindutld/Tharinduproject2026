@@ -1,4 +1,5 @@
 <?php
+
 include("../../Common/db.php");
 header('Content-Type: application/json');
 
@@ -35,15 +36,18 @@ if ($age < 6) {
 }
 
 // --- 3. Insert into database ---
+// --- 3. Insert into database ---
 $stmt = $conn->prepare("INSERT INTO staff_users (first_name, last_name, email, phone, gender, birth_date, role, status, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("sssssssss", $first, $last, $email, $phone, $gender, $birthdate, $role, $status, $password);
 
 if ($stmt->execute()) {
+    // Return JSON Success (Don't redirect here!)
     echo json_encode([
         "status" => "success",
         "message" => "Staff member added successfully."
     ]);
 } else {
+    // Return JSON Error
     echo json_encode([
         "status" => "error",
         "message" => "Database error: " . $stmt->error
@@ -52,3 +56,4 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
+exit; // Always exit after sending JSON

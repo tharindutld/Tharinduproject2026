@@ -1,4 +1,4 @@
-/* admin_add_user.css */
+/* adm_add_user.css */
 
 body {
     overflow-x: hidden;
@@ -92,3 +92,4 @@ body {
 .btn-primary:active {
     transform: scale(0.98);
 }
+

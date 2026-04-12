@@ -14,11 +14,7 @@ $row = $result->fetch_assoc();
 <html>
 
 <head>
-
     <title>Edit Staff</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -137,7 +133,7 @@ $row = $result->fetch_assoc();
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <?php include '../../Common/footer.php' ?>
 
 </body>
 

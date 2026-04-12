@@ -1,4 +1,3 @@
-// script.js
 
 document.addEventListener("DOMContentLoaded", function () {
     // Optional: Close the offcanvas sidebar on mobile when a link without a collapse toggle is clicked

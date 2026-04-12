@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+$currentPage = 'adm_add_staff';
+?>
+
 <head>
     <?php include '../../Common/header.php' ?>
     <title>Add staff</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../Styles/Admin/admin_add_user.css">
+    <link rel="stylesheet" href="../../Styles/Admin/adm_add_staff.css">
 </head>
 
 <body>
@@ -25,7 +28,7 @@
                             </div>
                             <div class="card-body p-4">
 
-                                <form id="userRegistrationForm" action="../../Controllers/Admin/insert_staff.php"
+                                <form id="userRegistrationForm" action="../../Controllers/Admin/adm_add_staff.php"
                                     method="POST" novalidate>
 
                                     <div class="row mb-3">
@@ -34,7 +37,8 @@
                                                     class="text-danger">*</span></label>
                                             <input type="text" class="form-control" id="first_name" name="first_name"
                                                 placeholder="Enter first name" minlength="3" pattern="[A-Za-z\s]+"
-                                                oninput="checkFirstname(this)" required>
+                                                 required>
+
                                             <div class="invalid-feedback">Please enter a first name.</div>
                                         </div>
                                         <div class="col-md-6">
@@ -120,27 +124,36 @@
                                         <div class="col-md-6">
                                             <label for="password" class="form-label">Password <span
                                                     class="text-danger">*</span></label>
-                                                    <div class="input-group">
-                                            <input type="password" class="form-control" id="password" name="password"
-                                                oninput="checkPassword(this)" minlength="8"
-                                                placeholder="At least 8 characters" required>
-                                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                                                <i class="bi bi-eye"></i>
-                                            </button>
-                                            <div class="invalid-feedback">Password must be 8+ chars with Uppercase,
-                                                Lowercase, and a Special Character (@#$%).</div>
+                                            <div class="input-group">
+                                                <input type="password" class="form-control" id="password"
+                                                    name="password" minlength="8"
+                                                    placeholder="At least 8 characters" required>
+                                                <button class="btn btn-outline-secondary" type="button"
+                                                    id="togglePassword">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                                <div class="invalid-feedback">Password must be 8+ chars with Uppercase,
+                                                    Lowercase, and a Special Character (@#$%).</div>
+                                            </div>
                                         </div>
+
+                                        <hr>
+
+                                        <div class="d-flex justify-content-end gap-2">
+
+                                            <button type="button" id="resetBtn" class="btn btn-outline-secondary px-4">
+                                                Clear Form
+                                            </button>
+
+                                            <button type="submit" id="submitBtn" class="btn btn-primary px-4">
+                                                Create User
+                                            </button>
+
                                     </div>
 
-                                    <hr>
+                                    <!-- success + error messages -->
+                                    <div id="formMessage" class="mt-3 fw-bold"></div>
 
-                                    <div class="d-flex justify-content-end gap-2">
-                                        <button type="button" onclick="resetForm()" id="resetBtn"
-                                            class="btn btn-outline-secondary px-4">Clear Form</button>
-                                        <button type="submit" id="submitBtn" class="btn btn-primary px-4">Create
-                                            User
-                                        </button>
-                                    </div>
                                 </form>
 
                             </div>
@@ -151,8 +164,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../Script/Admin/admin_add_user.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../../Script/Admin/adm_add_staff.js"></script>
 </body>
 
 </html>
